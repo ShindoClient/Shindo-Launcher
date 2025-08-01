@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shindo Launcher", "Shindo Launcher\Shindo Launcher.csproj", "{5A9D876C-6E0A-9367-70C3-533CF019C2DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shindo Launcher.Desktop", "Shindo Launcher.Desktop\Shindo Launcher.Desktop.csproj", "{37E4FA79-B41D-C487-FA7E-EE5B9F107AAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A9D876C-6E0A-9367-70C3-533CF019C2DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A9D876C-6E0A-9367-70C3-533CF019C2DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A9D876C-6E0A-9367-70C3-533CF019C2DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A9D876C-6E0A-9367-70C3-533CF019C2DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37E4FA79-B41D-C487-FA7E-EE5B9F107AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37E4FA79-B41D-C487-FA7E-EE5B9F107AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37E4FA79-B41D-C487-FA7E-EE5B9F107AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37E4FA79-B41D-C487-FA7E-EE5B9F107AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05783310-6ED8-46E9-A8C2-629AF3D6D22A}
+	EndGlobalSection
+EndGlobal

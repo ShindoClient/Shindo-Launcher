@@ -1,0 +1,185 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        x:Class="Shindo_Launcher.Views.MainWindow"
+        Width="400" Height="600"
+        Title="Shindo Launcher"
+        Icon="/Assets/icon.ico">
+
+	<Window.Background>
+		<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+			<GradientStop Color="#222222" Offset="0" />
+			<GradientStop Color="#FFFFFF" Offset="1" />
+		</LinearGradientBrush>
+	</Window.Background>
+	
+	<Window.Styles>
+		<Style Selector="Button#PlayButton">
+			<Setter Property="Template">
+				<ControlTemplate>
+					<Border
+                        Background="{TemplateBinding Background}"
+                        CornerRadius="10"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+						<ContentPresenter
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Foreground="{TemplateBinding Foreground}"
+                            Content="{TemplateBinding Content}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"/>
+					</Border>
+				</ControlTemplate>
+			</Setter>
+
+			<!-- Estilo padrão -->
+			<Setter Property="Background" Value="#006ce0"/>
+			<Setter Property="BorderBrush" Value="#006ce0"/>
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="BorderThickness" Value="2"/>
+			<Setter Property="FontSize" Value="20"/>
+			<Setter Property="FontWeight" Value="Bold"/>
+			<Setter Property="Padding" Value="10"/>
+			<Setter Property="Width" Value="120"/>
+			<Setter Property="Height" Value="50"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="VerticalAlignment" Value="Bottom"/>
+		</Style>
+
+		<!-- Hover -->
+		<Style Selector="Button#PlayButton:pointerover">
+			<Setter Property="Background" Value="#0050b3"/>
+		</Style>
+
+		<!-- Pressionado -->
+		<Style Selector="Button#PlayButton:pressed">
+			<Setter Property="Background" Value="#003c8f"/>
+		</Style>
+
+		<Style Selector="Button#OptionsButton">
+			<Setter Property="Template">
+				<ControlTemplate>
+					<Border
+                        Background="{TemplateBinding Background}"
+                        CornerRadius="10"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+						<ContentPresenter
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Foreground="{TemplateBinding Foreground}"
+                            Content="{TemplateBinding Content}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"/>
+					</Border>
+				</ControlTemplate>
+			</Setter>
+
+			<!-- Estilo padrão -->
+			<Setter Property="Background" Value="#006ce0"/>
+			<Setter Property="BorderBrush" Value="#006ce0"/>
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="BorderThickness" Value="2"/>
+			<Setter Property="FontSize" Value="20"/>
+			<Setter Property="FontWeight" Value="Bold"/>
+			<Setter Property="Padding" Value="10"/>
+			<Setter Property="Width" Value="120"/>
+			<Setter Property="Height" Value="50"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="VerticalAlignment" Value="Bottom"/>
+		</Style>
+		<Style Selector="Button#OptionsButton:pointerover">
+			<Setter Property="Background" Value="#0050b3"/>
+		</Style>
+
+		<!-- Pressionado -->
+		<Style Selector="Button#OptionsButton:pressed">
+			<Setter Property="Background" Value="#003c8f"/>
+		</Style>
+
+		<Style Selector="Button#Done">
+			<Setter Property="Template">
+				<ControlTemplate>
+					<Border
+                        Background="{TemplateBinding Background}"
+                        CornerRadius="10"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+						<ContentPresenter
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Foreground="{TemplateBinding Foreground}"
+                            Content="{TemplateBinding Content}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"/>
+					</Border>
+				</ControlTemplate>
+			</Setter>
+
+			<!-- Estilo padrão -->
+			<Setter Property="Background" Value="#006ce0"/>
+			<Setter Property="BorderBrush" Value="#006ce0"/>
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="BorderThickness" Value="2"/>
+			<Setter Property="FontSize" Value="20"/>
+			<Setter Property="FontWeight" Value="Bold"/>
+			<Setter Property="Padding" Value="10"/>
+			<Setter Property="Width" Value="120"/>
+			<Setter Property="Height" Value="50"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="VerticalAlignment" Value="Bottom"/>
+		</Style>
+
+		<Style Selector="Button#Done:pointerover">
+			<Setter Property="Background" Value="#0050b3"/>
+		</Style>
+
+		<!-- Pressionado -->
+		<Style Selector="Button#Done:pressed">
+			<Setter Property="Background" Value="#003c8f"/>
+		</Style>
+		
+	</Window.Styles>
+
+	<StackPanel Name="RootPanel" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="15">
+
+		<!-- Tela de loading inicial -->
+		<!-- Painel de loading -->
+		<StackPanel Name="LoadingPanel" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
+			<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Image Width="128" Height="128" Source="/Assets/spinner.gif"/>
+			</Grid>
+			<TextBlock Name="AttLabel" Text="Verificando atualizações" FontSize="18" Foreground="Black" HorizontalAlignment="Center"/>
+		</StackPanel>
+
+		<!-- Tela principal -->
+		<StackPanel Name="MainPanel" IsVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
+			<Image Source="/Assets/icon.ico" Width="128" Height="128" HorizontalAlignment="Center"/>
+			<TextBlock Name="StatusLabel" Text="..." FontSize="16" Foreground="Black" HorizontalAlignment="Center" Margin="0 20"/>
+			<Button Name="PlayButton" Content="INICIAR" IsEnabled="False" Click="Button_Click_1"/>
+			<Button Name="OptionsButton" Content="OPÇÕES" Margin="0,10,0,0" Click="Button_Click_2"/>
+		</StackPanel>
+
+		<!-- Painel de opções (novo) -->
+		<StackPanel Name="OptionsPanel" IsVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="15">
+			<TextBlock Text="Ajustar RAM (MB)" Foreground="Black" FontSize="18" HorizontalAlignment="Center"/>
+
+			<Slider Name="RamSlider"
+                    Minimum="1024"
+                    Maximum="8192"
+                    Value="4096"
+                    TickFrequency="512"
+                    IsSnapToTickEnabled="True"
+                    Width="250"
+                    ValueChanged="Slider_ValueChanged"/>
+
+			<TextBlock Name="RamValueLabel"
+                       Text="RAM Selecionada: 4096 MB"
+					   Foreground="Black"
+                       FontSize="16"
+                       HorizontalAlignment="Center"/>
+
+			<Button Name="Done" Content="CONCLUIR" Click="Button_Click_3"/>
+		</StackPanel>
+
+	</StackPanel>
+</Window>
