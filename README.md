@@ -50,12 +50,12 @@ Com ele, você pode baixar, atualizar e iniciar o **Shindo Client** com facilida
 - Java incluído no próprio `.shindo` (não precisa instalar manualmente)
 
 ### 🟢 Linux
-- Distribuição com suporte a .NET 8 (Ubuntu 20.04+, Debian 11+, Fedora 36+)  
-- GTK3 instalado (necessário para interface gráfica do Avalonia):
+- Distribuição com suporte a .NET 8 (Ubuntu 20.04+, Debian 11+, Fedora 36+)  
+- **Dependências nativas para JavaFX e Avalonia**  
   ```bash
-  sudo apt install libgtk-3-0    # Debian/Ubuntu
-  sudo dnf install gtk3          # Fedora
-  ```
+  sudo apt update
+  sudo apt install -y     libgtk-3-0 libgtk-3-dev libxtst6 libxslt1.1 libxxf86vm1     libcanberra-gtk-module libglib2.0-0     libgdk-pixbuf2.0-0 libpangocairo-1.0-0 libatk1.0-0 libatk-bridge2.0-0     libx11-6 libxext6 libxrandr2 libxrender1 libxi6     libasound2 libpulse0 libdbus-glib-1-2 libnss3 libfontconfig1     libjpeg-turbo8 libfreetype6
+  ```  
 - Java incluído no próprio `.shindo` (não precisa instalar manualmente)
 
 ---
